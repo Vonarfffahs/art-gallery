@@ -9,12 +9,14 @@
 </head>
 <body>
     <header>
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="artists.html">Artists</a></li>
-            <li><a href="art-exhibition.html">Exhibitions</a></li>
-        </ul>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="art-exhibition.html">Exhibitions</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -74,63 +76,65 @@
                 </li>
             </ul>
     
-            <h1>Artists Information</h1>
-            <table border="1px" cellspacing="10" cellpadding="5">
-                <colgroup>
-                    <col span="1" style="background-color: lightblue;">
-                    <col span="1" style="background-color: lightgreen;">
-                    <col span="2" style="background-color: lightyellow;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th rowspan="2">Artist</th>
-                        <th colspan="2">Artwork</th>
-                        <th rowspan="2">Description</th>
-                    </tr>
-                    <tr>
-                        <th>Year</th>
-                        <th>Medium</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="center">Leonardo da Vinci</td>
-                        <td align="center">1503</td>
-                        <td align="center">Oil</td>
-                        <td>
-                            The Mona Lisa is a half-length portrait painting
-                            by the Italian Renaissance artist Leonardo da Vinci.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center">Vincent van Gogh</td>
-                        <td align="center">1889</td>
-                        <td align="center">Oil</td>
-                        <td>
-                            The Starry Night is an oil on canvas painting by Dutch
-                            Post-Impressionist painter Vincent van Gogh.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center">Pablo Picasso</td>
-                        <td align="center">1937</td>
-                        <td align="center">Oil</td>
-                        <td>
-                            Guernica is a large oil painting on canvas
-                            by Spanish artist Pablo Picasso. It was created in response
-                            to the bombing of Guernica, a Basque Country town in northern Spain,
-                            by German and Italian warplanes at the behest of the Spanish Nationalist
-                            forces, on 26 April 1937, during the Spanish Civil War.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="artists-info">
+                <h1>Artists Information</h1>
+                <table border="1px" cellspacing="10" cellpadding="5">
+                    <colgroup>
+                        <col span="1" style="background-color: lightblue;">
+                        <col span="1" style="background-color: lightgreen;">
+                        <col span="2" style="background-color: lightyellow;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Artist</th>
+                            <th colspan="2">Artwork</th>
+                            <th rowspan="2">Description</th>
+                        </tr>
+                        <tr>
+                            <th>Year</th>
+                            <th>Medium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="center">Leonardo da Vinci</td>
+                            <td align="center">1503</td>
+                            <td align="center">Oil</td>
+                            <td>
+                                The Mona Lisa is a half-length portrait painting
+                                by the Italian Renaissance artist Leonardo da Vinci.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">Vincent van Gogh</td>
+                            <td align="center">1889</td>
+                            <td align="center">Oil</td>
+                            <td>
+                                The Starry Night is an oil on canvas painting by Dutch
+                                Post-Impressionist painter Vincent van Gogh.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">Pablo Picasso</td>
+                            <td align="center">1937</td>
+                            <td align="center">Oil</td>
+                            <td>
+                                Guernica is a large oil painting on canvas
+                                by Spanish artist Pablo Picasso. It was created in response
+                                to the bombing of Guernica, a Basque Country town in northern Spain,
+                                by German and Italian warplanes at the behest of the Spanish Nationalist
+                                forces, on 26 April 1937, during the Spanish Civil War.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 
     <footer>
         <div class="footer">
-            
+            <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
 </body>
