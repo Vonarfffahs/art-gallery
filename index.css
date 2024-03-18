@@ -1,5 +1,5 @@
 body {
-    background-color:honeydew;
+    background-color:#e8f4ea;
     margin: 0;
     padding: 0;
     font-size: 1.5vw;
@@ -44,12 +44,14 @@ ul {
     color: darkred;
     font-weight: bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
 }
 
 ol {
     color: black;
     font-weight: 100;
     font-family:'Courier New', Courier, monospace;
+    list-style-type: none;
 }
 
 dl {
@@ -64,8 +66,16 @@ dd {
     font-size: medium;
 }
 
+td a::after{
+    content: ' ©';
+}
+
+.content li::before {
+    content: '\2609  ';
+}
+
 .content {
-    padding: 0 10vw;
+    padding: 20px 10vw 0 10vw;
 }
 
 .navbar {  
@@ -91,16 +101,35 @@ dd {
     background: #630000;
 }
 
+.links {
+    position: absolute;
+    right: 10vw;
+}
+
+.links a:link {
+    color:blueviolet;
+}
+
+.links a:visited {
+    color:darkred;
+}
+
+.links a:active {
+    color:darkgreen;
+}
+
 #headline {
     text-align: center;
 }
 
-#headline + p {
-    color:#630000;
-}
-
 #caption {
     font-style: italic;
+}
+
+#floating-image {
+    float: left;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
 }
 
 .article {
@@ -112,12 +141,20 @@ dd {
     width: 100%;
 }
 
+#encourage {
+    color: rgb(196, 21, 21);
+}
+
 /*catalog styles*/
 .catalog-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.catalog-elem:first-child {
+    color:red;
 }
 
 .catalog-elem {
