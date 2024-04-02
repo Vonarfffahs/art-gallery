@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
+    <!--artists-->
     <header>
         <nav>
             <ul class="navbar">
@@ -22,7 +23,7 @@
     <main>
         <div class="content">
             <h1>Famous artists</h1>
-            <p id="headline" ><strong>Meet Our Artists</strong></p>
+            <p id="headline" >Meet Our Artists</p>
             <p id="caption">Learn about the talented individuals behind the masterpieces.</p>
             <p>Each artist has a unique story to tell through their art.</p>
             <ul>
@@ -129,6 +130,9 @@
                     </tbody>
                 </table>
             </div>
+
+
+
         </div>
     </main>
 
@@ -137,5 +141,87 @@
             <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
+
+    <script>
+        document.body.style.backgroundColor = 'lightpink';
+        setTimeout(() => document.body.style.backgroundColor = '', 30000);
+
+        let divContent = document.querySelector('.content'),
+            paintersList = divContent.querySelector('ul'),
+            paintersTable = divContent.querySelector('.artists-info'),
+            textNode = document.body.firstChild.nextSibling,
+            headlineElem = divContent.querySelector('#headline');
+        
+        paintersList.innerHTML = `
+            <h2>Top Painters:</h2>
+            <li>Leonardo da Vinci</li>
+            <li>Vincent van Gogh</li>
+            <li>Pablo Picasso</li>
+            <li>Michelangelo Buonarroti</li>
+            <li>Claude Monet</li>
+        `;
+
+        paintersTable.outerHTML = `
+            <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <div class="image">
+                        <img src="../images/artists/rembrandt.jpg" alt="Rembrandt" style="width: 100%;">
+                    </div>
+                    <div class="container">
+                      <h2>Rembrandt van Rijn</h2>
+                      <p class="title">Baroque</p>
+                      <p><button class="button">Read More</button></p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                    <div class="image">
+                        <img src="../images/artists/monet.jpg" alt="Monet" style="width: 100%;">
+                    </div>
+                    <div class="container">
+                      <h2>Claude Monet</h2>
+                      <p class="title">Impressionism</p>
+                      <p><button class="button">Read More</button></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <div class="image">
+                        <img src="../images/artists/dali.jpg" alt="Dali" style="width: 100%;">
+                    </div>
+                    <div class="container">
+                      <h2>Salvador Dalí</h2>
+                      <p class="title">Surrealism</p>
+                      <p><button class="button">Read More</button></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                      <div class="image">
+                          <img src="../images/artists/matisse.jpg" alt="Matisse" style="width: 100%;">
+                      </div>
+                      <div class="container">
+                        <h2>Henri Matisse</h2>
+                        <p class="title">Fauvism</p>
+                        <p><button class="button">Read More</button></p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        `;
+        
+        console.log(textNode.data);
+        textNode.data = `vincent van gogh`;
+        console.log(textNode.data);
+
+        headlineElem.textContent = 'Artists';
+    </script>
 </body>
 </html>

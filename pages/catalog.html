@@ -22,7 +22,7 @@
     <main>
         <div class="content">
             <h1>Catalog</h1>
-            <p id="headline"><strong>Discover a wide range of artworks from various artists.</strong></p>
+            <p id="headline">Discover a wide range of artworks from various artists.</p>
             <p id="caption">From classical to contemporary, our catalog has it all.</p>
             <p class="article"> This is a place where art comes to life.
                 Welcome to our extensive art catalog, where beauty meets diversity.
@@ -116,5 +116,25 @@
             <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
+
+    <script>
+        //task 1
+        alert('Welcome to Catalog!');
+        
+        if (confirm('Do you like art?')) {
+            let question = prompt('Enter your favourite painting', '');
+
+            if (question === null)
+                alert('You canceled the review');
+            else if (question != '')
+                alert(`Your favourite painting is ${question}`);
+        } else alert("You don't like art :(");
+
+        //task 2
+        let catalogElements = document.querySelectorAll('.catalog-elem');
+        catalogElements.forEach(elem => {
+            elem.style.color = 'blueviolet';
+        });
+    </script>
 </body>
 </html>

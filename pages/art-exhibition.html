@@ -60,8 +60,50 @@
 
     <footer>
         <div class="footer">
-            <p id="copyright">&copy; 2024 Gallery of Art</p>
+            <script>
+                document.write('<p id="copyright">&copy; 2024 Gallery of Art</p>');
+            </script>
         </div>
     </footer>
+
+    <script>
+        if (confirm('Would you like to read more about Ukrainian painters of 20th century?')) 
+            location.href = "https://en.uartlib.org/ukrainian-artists/";
+
+        let table = document.querySelector('table'),
+            tableCaption = table.querySelector('caption'),
+            tableBody = table.querySelector('tbody'),
+            secondRow = tableBody.querySelector('tr:nth-child(2)');
+
+        let newCaption = document.createElement('caption'),
+            newRow = document.createElement('tr'),
+            artistCell = document.createElement('td'),
+            artworkCell = document.createElement('td'),
+            descriptionCell = document.createElement('td');
+
+        artistCell.textContent = "Claude Monet";
+        artworkCell.textContent = "Impression, sunrise";
+        descriptionCell.textContent = "Depicts the port of Le Havre, Monet's hometown, and is his most famous painting of the harbor.";
+
+        newRow.append(artistCell);
+        newRow.append(artworkCell);
+        newRow.append(descriptionCell);
+
+        tableBody.append(newRow);
+
+        newRow.children[0].textContent = 'Salvador Dalí';
+        newRow.children[1].textContent = 'The Persistence of Memory';
+        newRow.children[2].textContent = 'The image of the soft melting pocket watch';
+
+        tableBody.prepend(newRow);
+
+        textNode = document.createTextNode('End');
+        table.after(textNode);
+
+        newCaption.textContent = 'Artist Information';
+        tableCaption.replaceWith(newCaption);
+
+        secondRow.remove();
+    </script>
 </body>
 </html>
