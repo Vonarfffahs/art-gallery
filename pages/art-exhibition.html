@@ -25,85 +25,46 @@
             <p align="center" ><b>Current Art Exhibition</b></p>
             <p><i>Experience the beauty and innovation of our featured exhibition.</i></p>
             <p>Join us in celebrating creativity and imagination.</p>
-    
-            <table>
-                <caption>
-                    Art Exhibitions        
-                </caption>
-                <thead>
-                    <tr>
-                        <th>Artist</th>
-                        <th>Artwork</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody align="center">
-                    <tr>
-                        <td><img src="../images/rembrandt.jpg" alt="Rembrandt van Rijn" width="150px" height="200px"></td>
-                        <td><img src="../images/table-painting.jpg" alt="The Storm on the Sea of Galilee" width="150px" height="200px"></td>
-                        <td><img src="../images/table-painting2.jpg" alt="Winter Landscape" width="150px" height="200px"></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci">Leonardo da Vinci</a></td>
-                        <td><a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)#/media/File:Última_Cena_-_Da_Vinci_5.jpg">The Last Supper</a></td>
-                        <td><a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)">Famous Leonardo's painting</a></td>
-                    </tr>
-                    <tr>
-                        <td>Vincent van Gogh</td>
-                        <td>Sunflowers, August 1889.</td>
-                        <td>Shows a bouquet of sunflowers in a vase.</td>
-                    </tr>
-                </tbody>
-            </table>
+        
+            <div class="wrapper">
+                <table>
+                    <caption>
+                        Art Exhibitions        
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Artwork</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody align="center">
+                        <tr>
+                            <td><img src="../images/rembrandt.jpg" alt="Rembrandt van Rijn" width="150px" height="200px"></td>
+                            <td><img src="../images/table-painting.jpg" alt="The Storm on the Sea of Galilee" width="150px" height="200px"></td>
+                            <td><img src="../images/table-painting2.jpg" alt="Winter Landscape" width="150px" height="200px"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci">Leonardo da Vinci</a></td>
+                            <td><a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)#/media/File:Última_Cena_-_Da_Vinci_5.jpg">The Last Supper</a></td>
+                            <td><a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)">Famous Leonardo's painting</a></td>
+                        </tr>
+                        <tr>
+                            <td>Vincent van Gogh</td>
+                            <td>Sunflowers, August 1889.</td>
+                            <td>Shows a bouquet of sunflowers in a vase.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
     </main>
 
     <footer>
         <div class="footer">
-            <script>
-                document.write('<p id="copyright">&copy; 2024 Gallery of Art</p>');
-            </script>
+            <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
-
-    <script>
-        if (confirm('Would you like to read more about Ukrainian painters of 20th century?')) 
-            location.href = "https://en.uartlib.org/ukrainian-artists/";
-
-        let table = document.querySelector('table'),
-            tableCaption = table.querySelector('caption'),
-            tableBody = table.querySelector('tbody'),
-            secondRow = tableBody.querySelector('tr:nth-child(2)');
-
-        let newCaption = document.createElement('caption'),
-            newRow = document.createElement('tr'),
-            artistCell = document.createElement('td'),
-            artworkCell = document.createElement('td'),
-            descriptionCell = document.createElement('td');
-
-        artistCell.textContent = "Claude Monet";
-        artworkCell.textContent = "Impression, sunrise";
-        descriptionCell.textContent = "Depicts the port of Le Havre, Monet's hometown, and is his most famous painting of the harbor.";
-
-        newRow.append(artistCell);
-        newRow.append(artworkCell);
-        newRow.append(descriptionCell);
-
-        tableBody.append(newRow);
-
-        newRow.children[0].textContent = 'Salvador Dalí';
-        newRow.children[1].textContent = 'The Persistence of Memory';
-        newRow.children[2].textContent = 'The image of the soft melting pocket watch';
-
-        tableBody.prepend(newRow);
-
-        textNode = document.createTextNode('End');
-        table.after(textNode);
-
-        newCaption.textContent = 'Artist Information';
-        tableCaption.replaceWith(newCaption);
-
-        secondRow.remove();
-    </script>
 </body>
 </html>

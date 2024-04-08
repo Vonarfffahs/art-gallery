@@ -78,9 +78,14 @@ ul li {
     background: #630000;
 }
 
-.links {
+.wrapper-abs {
     position: absolute;
+    top: 10vw;
     right: 10vw;
+}
+
+.align-right {
+    text-align: right;
 }
 
 .links a:link {
@@ -256,4 +261,67 @@ ul li {
 #copyright {
     margin: 0;
     padding: 0 0 0 5vw;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#catalogMenu {
+    justify-content: center;
+}
+
+.btn-red {
+    background: #c60000;
+    border: 1px solid #c60000;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.btn-red:hover,
+.btn-red:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #c60000;
+}
+
+#catalogMenu button:active {
+  opacity: .5;
+}
+
+#gallery {
+    margin: 2vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-img {
+    margin-top: 1vw;
+    width: 25%;
+}
+
+.gallery-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }

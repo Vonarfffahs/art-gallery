@@ -21,7 +21,7 @@
 
     <main>
         <div class="content">
-            <h1>Catalog</h1>
+            <h1 id="contentHeader">Catalog</h1>
             <p id="headline">Discover a wide range of artworks from various artists.</p>
             <p id="caption">From classical to contemporary, our catalog has it all.</p>
             <p class="article"> This is a place where art comes to life.
@@ -39,6 +39,18 @@
                 originality, and artistic merit. We believe in showcasing
                 the best of contemporary art while honoring the rich traditions of the past.
             </p>
+
+            <div class="wrapper">
+                <div id="catalogMenu">
+                    <button data-action="showAll" class="btn-red">Show All</button>
+                    <button data-action="showLandscapes" class="btn-red">Landscapes</button>
+                    <button data-action="showPortraits" class="btn-red">Portraits</button>
+                </div>
+            </div>
+
+            <div id="gallery">
+                <!-- Placeholder for images -->
+            </div>
 
             <div class="catalog-section">
                 <div class="catalog-elem">
@@ -118,23 +130,17 @@
     </footer>
 
     <script>
-        //task 1
-        alert('Welcome to Catalog!');
-        
-        if (confirm('Do you like art?')) {
-            let question = prompt('Enter your favourite painting', '');
-
-            if (question === null)
-                alert('You canceled the review');
-            else if (question != '')
-                alert(`Your favourite painting is ${question}`);
-        } else alert("You don't like art :(");
-
-        //task 2
-        let catalogElements = document.querySelectorAll('.catalog-elem');
-        catalogElements.forEach(elem => {
-            elem.style.color = 'blueviolet';
+        contentHeader.addEventListener('mouseenter', {
+            handleEvent(e) {
+                e.target.style.cursor = "pointer";
+            }
+        });
+        contentHeader.addEventListener('click', {
+            handleEvent(e) {
+                alert(e.type + " on " + e.currentTarget);
+            }
         });
     </script>
+    <script src="../index.js"></script>
 </body>
 </html>

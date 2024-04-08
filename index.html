@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery - Home Page</title>
     <meta name="author" content="Victor Shafranov IS-21">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -23,21 +29,29 @@
         <div class="content">
             <h1>Welcome to home page!</h1>
 
-            <div class="links">
-                <a href="#bottom">To the end</a><br>
-                <a href="pages/catalog.html#bottom">To the end of catalog</a><br>
-                <a href="https://en.wikipedia.org/wiki/Art_gallery">Art Galley Wiki</a>
+            <div class="wrapper-abs">
+                <div class="align-right">
+                    <button data-toggle-id="hide-links" class="btn-red">Hide links</button>
+                </div>
+                <div class="links" id="hide-links">
+                    <a href="#bottom">To the end</a><br>
+                    <a href="pages/catalog.html#bottom">To the end of catalog</a><br>
+                    <a href="https://en.wikipedia.org/wiki/Art_gallery">Art Galley Wiki</a>
+                </div>
             </div>
 
             <p id="headline">This is a place where art comes to life.</p>
             <p id="caption">Explore our collection and dive into the world of creativity.</p>
-            <p id="headline">This is a place where art comes to life.</p>
             <p class="article">Immerse yourself in the vibrant world of creativity and expression.
                 Our art gallery is a sanctuary where artists from around the globe 
                 converge to share their vision with the world.
                 Experience the beauty of classical masterpieces, the boldness of
                 contemporary art, and the depth of abstract expressionism.
-                <div id="floating-image"><img src="https://www.kunstloft.com/wordpress/en_UK/eu/wp-content/uploads/2023/07/Painter-with-landscape-painting.jpg" width="150px" height="150px"></div>
+                <div id="floating-image" 
+                    onmouseenter="changeHeadlineColor()"
+                    onmouseleave="changeHeadlineColor()">
+                    <img src="https://www.kunstloft.com/wordpress/en_UK/eu/wp-content/uploads/2023/07/Painter-with-landscape-painting.jpg" width="150px" height="150px">
+                </div>
                 Our collection spans centuries and genres, offering something for every art enthusiast. 
                 At our gallery, art isn't just about what you see—it's about
                 what you feel. Explore the depths of emotion captured in each
@@ -60,7 +74,11 @@
             <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
-
+    <script>
+        bottom.onclick = () => {
+            alert('Welcome!');
+        }
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
