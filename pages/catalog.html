@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
     <meta name="author" content="Victor Shafranov IS-21">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
@@ -49,7 +55,14 @@
             </div>
 
             <div id="gallery">
-                <!-- Placeholder for images -->
+                <div class="gallery-img"><img src="../images/gallery/landscape1.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/portrait1.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/portrait2.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/landscape2.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/portrait3.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/portrait4.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/landscape3.jpg" alt="Landscape 1" ></div>
+                <div class="gallery-img"><img src="../images/gallery/portrait5.jpg" alt="Landscape 1" ></div>
             </div>
 
             <div class="catalog-section">
@@ -128,19 +141,6 @@
             <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
-
-    <script>
-        contentHeader.addEventListener('mouseenter', {
-            handleEvent(e) {
-                e.target.style.cursor = "pointer";
-            }
-        });
-        contentHeader.addEventListener('click', {
-            handleEvent(e) {
-                alert(e.type + " on " + e.currentTarget);
-            }
-        });
-    </script>
     <script src="../index.js"></script>
 </body>
 </html>

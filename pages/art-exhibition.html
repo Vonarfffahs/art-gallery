@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Exhibitions</title>
     <meta name="author" content="Victor Shafranov IS-21">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
@@ -66,5 +72,35 @@
             <p id="copyright">&copy; 2024 Gallery of Art</p>
         </div>
     </footer>
+    <script>
+        let table = document.querySelector('table');
+
+        table.addEventListener('mouseover', (e) => {
+            let target = e.target,
+                    relatedTarget = e.relatedTarget;
+
+            if (target.tagName != 'TD') {
+                return;
+            }
+
+            target.style.backgroundColor = '#ba4f4f';
+            if (relatedTarget.tagName == 'TD')
+                relatedTarget.style.backgroundColor = '';                    
+        });
+
+        table.addEventListener('mouseout', (e) => {
+            let target = e.target,
+                relatedTarget = e.relatedTarget;
+            
+            if (relatedTarget.tagName != 'TD') {
+                return;
+            }
+
+
+            relatedTarget.style.border = '2px solid blue';
+            if (target.tagName == 'TD')
+                target.style.border = '';                    
+        });
+    </script>
 </body>
 </html>

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artists</title>
     <meta name="author" content="Victor Shafranov IS-21">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
@@ -101,30 +107,6 @@
       let paintersList = document.querySelector('#painters-list'),
           selectedLi;
       
-      //task 1 and 2
-      paintersList.addEventListener('click', changeHeaderOnMouseClick);
-      paintersList.addEventListener('click', moreInfoOnClick);
-
-      function moreInfoOnClick(e) {
-        let target = e.target;
-        if (target.tagName != 'LI') 
-          return;
-        if(confirm('Would you like to read more about painters on wiki?'))
-          window.location.href = 'https://www.singulart.com/en/blog/2023/08/29/famous-artists/';
-      }
-
-      function changeHeaderOnMouseClick(e) {
-        let target = e.target;
-        if (target.tagName != 'LI') 
-          return;
-        let headerElem = document.querySelector('#painters-header');
-        headerElem.style.color = 'darkred';
-      }
-
-      paintersList.removeEventListener('click', changeHeaderOnMouseClick);
-      paintersList.removeEventListener('click', moreInfoOnClick);
-
-      //task 2
       paintersList.addEventListener('click', changeLiColorOnClick);
 
       function changeLiColorOnClick(e) {
